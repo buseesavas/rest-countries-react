@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+body {
+  font-family: 'Nunito Sans';
+}
+
+.flagBoxes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.countriesBox {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  margin-inline: 55px;
+}
+
+.countryCard {
+  box-shadow: 0px 0px 7px 2px #00000008;
+}
+
+.countryCard img {
+  width: 264px;
+  height: 160px;
+}
+
+.cardText {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-inline: 24px;
+  padding-top: 24px;
+  padding-bottom: 46px;
+}
+
+.cardText p {
+font-size: 14px;
+font-weight: 600;
+line-height: 16px;
+text-align: left;
+color: #111517;
+}
+
+.countryName {
+font-size: 18px;
+font-weight: 800;
+line-height: 26px;
+text-align: left;
+color: #111517;
+margin-bottom: 16px;
+}
+
+.cardText p span {
+  font-weight: 300;
+}
+
+@media (width >= 780px) {
+  .countriesBox {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (width >= 1110px) {
+  .countriesBox {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
