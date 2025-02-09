@@ -1,7 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
 
 body {
-  font-family: 'Nunito Sans';
+  font-family: "Nunito Sans";
+}
+
+.header {
+  padding: 30px 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.inputBoxes {
+  padding: 24px 16px 32px 16px;
+  display: flex;
+  flex-direction: column;
+  max-width: 480px;
+  margin-inline: auto;
+}
+
+.themeSelection {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .flagBoxes {
@@ -14,6 +36,8 @@ body {
   grid-template-columns: 1fr;
   gap: 40px;
   margin-inline: 55px;
+  margin-inline: auto;
+  max-width: 264px;
 }
 
 .countryCard {
@@ -35,29 +59,322 @@ body {
 }
 
 .cardText p {
-font-size: 14px;
-font-weight: 600;
-line-height: 16px;
-text-align: left;
-color: #111517;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  text-align: left;
+  color: #111517;
 }
 
 .countryName {
-font-size: 18px;
-font-weight: 800;
-line-height: 26px;
-text-align: left;
-color: #111517;
-margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 26px;
+  text-align: left;
+  color: #111517;
+  margin-bottom: 16px;
 }
 
 .cardText p span {
   font-weight: 300;
 }
 
+.container {
+  padding-inline: 28px;
+}
+
+.backBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 7px 0px #0000004B;
+  border: none;
+  border-radius: 2px;
+  margin-top: 40px;
+  margin-bottom: 64px;
+}
+
+.flagImg {
+  border-radius: 4px;
+  margin-bottom: 44px;
+}
+
+.container h2 {
+font-size: 22px;
+font-weight: 800;
+line-height: 30.01px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color: #111517;
+margin-bottom: 16px;
+}
+
+.container p {
+font-size: 16px;
+font-weight: 600;
+line-height: 32px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color: #111517;
+}
+
+.container p span {
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+}
+
+.input-container {
+  position: relative;
+  display: inline-block;
+  max-width: 480px;
+  margin-inline: auto;
+  width: 100%;
+}
+
+.search-icon {
+  position: absolute;
+  left: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  fill: #b2b2b2;
+  stroke: #b2b2b2;
+}
+
+.custom-input {
+  padding: 18px 74px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  box-shadow: 0px 2px 9px 0px #0000000e;
+  border: none;
+  width: 100%;
+}
+
+.selectWrapper {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+}
+
+.selectWrapper::after {
+  content: "";
+  width: 8px;
+  height: 6px;
+  position: absolute;
+  right: 19px;
+  top: 70%;
+  transform: translateY(-50%);
+  background-color: black;
+  mask-image: url("data:image/svg+xml,%3Csvg width='8' height='6' viewBox='0 0 8 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.875 0.875L4 3.75L1.125 0.875L0.25 1.75L4 5.5L7.75 1.75L6.875 0.875Z' fill='black'/%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='8' height='6' viewBox='0 0 8 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.875 0.875L4 3.75L1.125 0.875L0.25 1.75L4 5.5L7.75 1.75L6.875 0.875Z' fill='black'/%3E%3C/svg%3E");
+}
+
+.filterSection {
+  padding: 14px 24px;
+  max-width: 200px;
+  width: 100%;
+  margin-top: 40px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 2px 9px 0px #0000000e;
+}
+
+.filterSection option {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #f8f8f8;
+  color: #333;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.dropdown {
+  position: relative;
+  width: 220px;
+}
+
+.dropdown-button {
+  width: 100%;
+  padding: 14px 24px;
+  font-size: 16px;
+  text-align: left;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  margin-top: 40px;
+}
+
+.arrow {
+  font-size: 14px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  width: 100%;
+  margin-top: 4px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0px 2px 9px 0px #0000000e;
+  z-index: 1000;
+  list-style: none;
+  padding: 8px 24px;
+}
+
+.dropdown-item {
+  padding-block: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* .dropdown-item:hover,
+.dropdown-item.active {
+  background-color: #f0f0f0;
+} */
+
+.container-light {
+  background-color: #fafafa;
+
+  .darkModeIcon path {
+    fill: white;
+    stroke: black;
+  }
+
+  .header {
+    background-color: white;
+  }
+
+  .dropdown-button {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #111517;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 9px 0px #0000000e;
+    border: none;
+  }
+}
+
+.container-dark {
+  background-color: #202b36;
+
+  h3 {
+    color: #ffffff;
+  }
+
+  svg path {
+    fill: white;
+    stroke: white;
+  }
+
+  span {
+    color: white;
+  }
+
+  .header {
+    background-color: #2b3844;
+  }
+
+  .input-container::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='#FFFFFF' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5A5.5 5.5 0 1 1 1 6.5a5.5 5.5 0 0 1 11 0z'/%3E%3C/svg%3E");
+  }
+
+  input {
+    background-color: #2b3844;
+  }
+
+  .selectWrapper::after {
+    background-color: white;
+  }
+
+  .filterSection {
+    border: none;
+    background-color: #2b3844;
+  }
+
+  .dropdown-menu {
+    background-color: #2b3844;
+    border: none;
+  }
+
+  .dropdown-item {
+    color: white;
+  }
+
+  .dropdown-button {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    background-color: #2b3844;
+    color: #ffffff;
+    box-shadow: 0px 2px 9px 0px #0000000e;
+    border: none;
+  }
+
+  .countryCard {
+    background-color: #2B3844;
+    box-shadow: 0px 0px 7px 2px #00000008;
+    border-radius: 5px;
+  }
+
+  .countryCard img {
+    width: 100%;
+  }
+
+  .countryName {
+    color: #FFFFFF;
+  }
+
+  .cardText {
+    p {
+      color: #FFFFFF;
+    }
+  }
+
+}
+
 @media (width >= 780px) {
   .countriesBox {
     grid-template-columns: repeat(3, 1fr);
+    max-width: 1280px;
+  }
+
+  .input-container {
+    margin-left: 0px;
+  }
+
+  .inputBoxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1260px;
+    align-items: center;
+  }
+
+  .dropdown-button {
+    margin-top: 0px;
   }
 }
 
